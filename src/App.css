@@ -1,0 +1,132 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+ /* Defines the image sizes */
+img {
+  height: 50px;
+  width: 50px;
+}
+
+ /* Gets rid of bullet points*/
+ul {
+  list-style-type: none;
+
+}
+
+h1 {
+  margin: 20px;
+  color: #333;
+  margin: 5px;
+  padding: 20px;
+
+
+
+  border: dashed;
+  border-radius: 5px;
+  border-color: grey;
+  padding: 30px 40px;
+  box-shadow: 0 0 20px 5px grey;
+
+
+
+}
+
+body {
+  font-family: 'Open-sans', sans-serif;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin:0;
+  padding:10px;
+
+  /* Creates a pikachu at the bottom right of the page */
+  background: white url(https://static.giantbomb.com/uploads/square_small/0/6087/2437349-pikachu.png) no-repeat bottom right;
+}
+
+/* Creates a border around the coin and its features*/
+.coin-border {
+  border: dashed;
+  padding: 10px;
+  margin: 5px;
+
+  border: dashed;
+  border-radius: 5px;
+  border-color: grey;
+  padding: 30px 40px;
+  box-shadow: 0 0 20px 5px grey;
+}
+
+/* Mainly used for spacing out the filters and search bar*/
+#filters {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 10px;
+
+  
+
+
+}
+
+#list-style {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border: dashed;
+  border-radius: 5px;
+  border-color: grey;
+  padding: 30px 40px;
+  box-shadow: 0 0 20px 5px grey;
+}
+
+
+#typeDropdown {
+  border-radius: 5px;
+  border-color: grey;
+  box-shadow: 0 0 20px 5px grey;
+}
+
+#sortButton {
+  border-radius: 5px;
+  border-color: grey;
+  box-shadow: 0 0 20px 5px grey;
+}
+
+#sortMarketcapButton {
+  border-radius: 5px;
+  border-color: grey;
+  box-shadow: 0 0 20px 5px grey;
+}
+
+#searchbar {
+  border-radius: 5px;
+  border-color: grey;
+  box-shadow: 0 0 20px 5px grey;
+}
+

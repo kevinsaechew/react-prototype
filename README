@@ -1,0 +1,65 @@
+You can visit the deployed site here: https://kevinsaechew.github.io/react-development/
+
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+
+How to run the app:
+
+cd into react-development and then call:
+
+### `npm start`
+
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
+
+
+The main files that I edited were: List.jsx, ListItem.jsx, FilteredList.jsx, App.js and App.css. These can be found in the src folder.
+
+Data between the components trickles down through the following components which are described. 
+
+App.js first creates a list of coins with many characteristics that are then passed into the FilteredList component.
+
+FilteredList.jsx is a component that filters and sorts the list. It creates two dropdown menus that filter by either 
+whether the coin has a "smart-contract function" or a "private transaction feature". There are also two sorting buttons
+that sort by "price" or "market cap" (which is the supply times the price of the tokens/coins). This component makes use of the
+List.jsx componenet to create the List after everything is filtered.
+
+List.jsx basically takes in a list and converts each item in the list to an HTML element. 
+It also makes use of the ListItem.jsx component
+
+ListItem.jsx is used in List.jsx and renders all of the coin's characteristics into HTML. This
+component was created because it's reusable and cleans up the code. 
+
+App.css makes everything look cleaner. I spaced out the sorting/filtering buttons. I also added a dashed border around
+the cryptocurrency coins so that it's easier to distinguish between them. I kept the items in a column order so that it's
+easy to understand how they're sorted. When sorted by price, the lowest price is at the top and the highest is at the bottom.
+When sorted by Marketcap, the largest marketcap is at the top, and the lowest is at the bottom. 
+
+User Interactions trigger a change in state in various ways. For example, the "type" and "privateType" states are initially set to "All".
+However, when the dropdown for the either type is clicked, the state changes to whatever the eventKey was. This is done through a function that
+changes the state and the eventKey which was selected. After the state is changed, a filter is used to check the state and filter the items based 
+on what the current state is. 
+
+The searchbar also triggers a state change that changes whenever a character is entered. The filter then checks if the item/coin contains the 
+characters.
+
+Regarding the sorting for the user interactions, two sort functions were created based on the two characteristics: price and market cap. 
+When the user clicks on either one, an event occurs that calls the function to alter the list. This also changes the sorted state to true.
+
+One design principle that this website has is that it has sensible defaults. At the beginning, when the page is loaded, all 
+twelve coins are visible. This is because the state for the transaction and smart contract types are set to "All" at first. 
+
+Regarding Interaction, a user can simply click the dropdowns or buttons to see an instant result. For example, clicking the Smart Contract Feature
+and then "Smart Contract" will instantly show coins that have the property "Smart Contract". The same goes for clicking "Private Transactions" and 
+then "Private" which will show only coins with those characteristics. To know that this works, the coins also have the feature in the text fields.
+
+Regarding Navigation, Everything is initially on one screen. All the filter dropdowns, sorting buttons, and search bar are at the top.
+The coins are ordered up and down so that when sorted, it's easy to determine the ranking. This website also follows the "3 Click Rule" where
+all the effects can be seen within 3 clicks.
+
+Overall, the goal of the application was to be able to display twelve notable cryptocurrency coins and have them be filtered and sorted based on 
+certain characteristics. The interface is very simple and includes various buttons for different tasks that are done efficiently. The value of the 
+project is derived from being able to allow the user to use an interactive interface to sift through certain cryptocurrency tokens based on multiple
+criteria that work together.
